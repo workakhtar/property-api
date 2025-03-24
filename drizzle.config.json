@@ -1,0 +1,6 @@
+{
+    "schema": "./src/db/schema.ts",
+    "out": "./src/drizzle",
+    "url": "postgresql://macbookpro:1234@localhost:5432/propertydb",
+    "dialect": "postgresql"
+}

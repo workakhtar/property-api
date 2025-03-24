@@ -1,0 +1,2 @@
+ALTER TABLE "owners" ADD COLUMN "property_id" serial NOT NULL;--> statement-breakpoint
+ALTER TABLE "owners" ADD CONSTRAINT "owners_property_id_properties_id_fk" FOREIGN KEY ("property_id") REFERENCES "public"."properties"("id") ON DELETE no action ON UPDATE no action;

@@ -1,0 +1,1 @@
+ALTER TABLE "owners" ADD COLUMN "persons" json[];

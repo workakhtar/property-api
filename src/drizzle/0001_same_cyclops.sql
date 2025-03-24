@@ -1,0 +1,1 @@
+ALTER TABLE "properties" ADD COLUMN "street_address" varchar(255) NOT NULL;

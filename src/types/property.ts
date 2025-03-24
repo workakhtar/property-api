@@ -1,0 +1,83 @@
+export interface PropertyReachApiResponse {
+    id: string;
+    apn: string;
+    streetNumber: string;
+    streetName: string;
+    ownershipType: string;
+    mailingCity: string;
+    mailingState: string;
+    zip: string;
+    mailingCounty: string;
+    propertyType: string;
+    buildingStyle: string;
+    buildingCondition: string;
+    squareFeet: number;
+    buildingSquareFeet: number;
+    livingSquareFeet: number;
+    garageSquareFeet: number;
+    garageUnfinishedSquareFeet: number;
+    parkingSpaces: number;
+    constructionType: string;
+    roofCoverType: string;
+    floorCoverType: string;
+    exteriorWallType: string;
+    interiorWallType: string;
+    heatingType: string;
+    heatingFuelType: string;
+    airConditioningType: string;
+    hoa: boolean;
+    hoa1Frequency: string;
+    marketValue: number;
+    marketLandValue: number;
+    marketImprovementValue: number;
+    assessedValue: number;
+    assessedLandValue: number;
+    assessedImprovementValue: number;
+    taxAmount: number;
+    assessedYear: number;
+    ownerOccupied: boolean;
+    occupancyType: string;
+    withinFloodZone: boolean;
+    floodZoneDescription: string;
+    estimatedValue: number;
+    estimatedRentAmount: number;
+    estimatedEquity: number;
+    estimatedEquityRatio: number;
+    loanBalance: number;
+    loanToValueRatio: number;
+    lastSaleDate: string;
+    lastSaleAmount: number;
+    priorSaleDate: string;
+    priorSaleAmount: number;
+    demographics: {
+        zip?: {
+            metrics: Record<string, number>;
+            location: string;
+        };
+        city?: {
+            metrics: Record<string, number>;
+            location: string;
+        };
+    };
+    taxAssessments: Array<{
+        id: number;
+        year: number;
+        taxRate: number;
+        landValue: number;
+        taxAmount: number;
+        assessedValue: number;
+        assessedAmount: number;
+        improvementValue: number;
+        taxAmountChangeRate?: number;
+    }>;
+    transactions: Array<{
+        id: string;
+        amount?: number;
+        saleDate?: string;
+        recordingDate: string;
+        documentType: string;
+        transactionType: string;
+        buyerNames?: string;
+        sellerNames?: string;
+    }>;
+}
